@@ -14,7 +14,8 @@
       </div>
       
       <h1 class="hero-title animate-slideup delay-200">
-        Nikmati Perjalanan Yang <span class="text-gold">Mewah & Nyaman</span> Bersama Joya Rent Car</h1>
+        Nikmati Perjalanan Yang <span class="text-gold">Mewah & Nyaman</span> Bersama Joya Rent Car
+      </h1>
       
       <p class="hero-desc animate-slideup delay-300">
         Sewa lepas kunci atau dengan driver profesional. Dengan Armada yang bersih, terawat, dan siap mengantar kebutuhan bisnis maupun liburan Anda.
@@ -38,18 +39,21 @@
     <!-- Kolom Kanan: Bento Grid Gambar -->
     <div class="hero-bento-grid animate-zoomin delay-300">
       <div class="bento-item bento-main">
-        <img src="/assets/images/hero1.webp" alt="Armada Premium Joya Rent Car" width="600" height="800" loading="eager">
+        <!-- DIBERSIHKAN: Menggunakan filter relative_url -->
+        <img src="{{ '/assets/images/hero1.webp' | relative_url }}" alt="Armada Premium Joya Rent Car" width="600" height="800" loading="eager">
         <div class="bento-badge">Armada Premium</div>
       </div>
       
       <div class="bento-side-stack">
         <div class="bento-item bento-sub">
-          <img src="/assets/images/hero2.webp" alt="Interior Mewah Joya Rent Car" width="500" height="280" loading="lazy">
+          <!-- DIBERSIHKAN: Menggunakan filter relative_url -->
+          <img src="{{ '/assets/images/hero2.webp' | relative_url }}" alt="Interior Mewah Joya Rent Car" width="500" height="280" loading="lazy">
           <div class="bento-badge">Interior Mewah</div>
         </div>
         
         <div class="bento-item bento-sub">
-          <img src="/assets/images/hero3.webp" alt="Driver Profesional Joya Rent Car" width="500" height="280" loading="lazy">
+          <!-- DIBERSIHKAN: Menggunakan filter relative_url -->
+          <img src="{{ '/assets/images/hero3.webp' | relative_url }}" alt="Driver Profesional Joya Rent Car" width="500" height="280" loading="lazy">
           <div class="bento-badge">Driver Profesional</div>
         </div>
       </div>

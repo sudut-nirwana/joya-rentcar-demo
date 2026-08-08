@@ -17,6 +17,13 @@
 
   <!-- Logo Container -->
   <div class="splash-logo-wrap">
-    <img id="splash-logo-img" src="/assets/images/logo.png" alt="Logo" class="splash-logo" />
+    <!-- DIBERSIHKAN: Filter relative_url ditambahkan -->
+    <img 
+      id="splash-logo-img" 
+      src="{{ '/assets/images/logo.png' | relative_url }}" 
+      alt="Logo Joya Rent Car" 
+      class="splash-logo" 
+      loading="eager"
+    />
   </div>
 </div>

@@ -36,7 +36,8 @@
       {% for item in site.data.armada %}
       <div class="armada-card animate-slideup delay-400" data-category="{{ item.kategori }}">
         <div class="card-media">
-          <img src="{{ item.gambar }}" alt="{{ item.nama }}" width="400" height="260" loading="lazy">
+          <!-- DIBERSIHKAN: Tambahkan filter relative_url -->
+          <img src="{{ item.gambar | relative_url }}" alt="{{ item.nama }}" width="400" height="260" loading="lazy">
           <span class="card-category-tag">{{ item.kategori_label }}</span>
         </div>
         

@@ -29,9 +29,11 @@
         <p class="testimonial-text">"{{ item.text }}"</p>
 
         <div class="testimonial-user">
+          <!-- DIBERSIHKAN: Filter relative_url & onerror fallback ditambahkan -->
           <img 
-            src="{{ item.avatar }}" 
+            src="{{ item.avatar | relative_url }}" 
             alt="{{ item.name }}" 
+            onerror="this.src='https://ui-avatars.com/api/?name={{ item.name | url_encode }}&background=272727&color=c09f50'"
             class="user-avatar" 
             loading="lazy" 
             width="44" 

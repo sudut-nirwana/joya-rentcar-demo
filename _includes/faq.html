@@ -4,7 +4,7 @@
     <div class="faq-sidebar animate-slideup">
       <div class="faq-header">
         <span class="faq-badge">
-          <i data-icon="sparkles"></i> TANYA JAWAB
+          <span data-icon="sparkles"></span> TANYA JAWAB
         </span>
         <h2 class="faq-title">Pertanyaan yang <span class="text-gold">Sering Diajukan</span></h2>
         <p class="faq-desc">Temukan jawaban cepat seputar persyaratan sewa, armada, dan layanan Joya Rent Car di sini.</p>
@@ -12,13 +12,26 @@
 
       <div class="faq-help-card animate-slideup">
         <div class="help-icon-wrapper">
-          <i data-icon="message-square-dots"></i>
+          <span data-icon="message-square-dots"></span>
         </div>
         <div class="help-text">
           <h4>Masih Ada Pertanyaan?</h4>
           <p>Tim Customer Service kami siap membantu Anda 24/7.</p>
           <div class="faq-gold-decoration">
             <svg class="gold-thread" viewBox="0 0 300 45" preserveAspectRatio="none">
+              <!-- DIBERSIHKAN: Tambahkan defs agar warna gradient selalu muncul -->
+              <defs>
+                <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--color-gold-dark)" stop-opacity="0.2" />
+                  <stop offset="50%" stop-color="var(--color-gold-light)" stop-opacity="0.95" />
+                  <stop offset="100%" stop-color="var(--color-gold-dark)" stop-opacity="0.2" />
+                </linearGradient>
+                <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--color-gold-primary)" stop-opacity="0.1" />
+                  <stop offset="50%" stop-color="var(--color-gold-primary)" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="var(--color-gold-primary)" stop-opacity="0.1" />
+                </linearGradient>
+              </defs>
               <path d="M0 35 Q 150 -5 300 30" stroke="url(#goldGrad1)" stroke-width="1.5" fill="none" />
               <path d="M0 15 Q 150 45 300 20" stroke="url(#goldGrad2)" stroke-width="1.2" stroke-dasharray="4 2" fill="none" />
             </svg>
@@ -44,7 +57,7 @@
         <summary class="faq-question">
           <span class="question-text">Apa saja syarat dan dokumen untuk sewa mobil lepas kunci?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">
@@ -56,7 +69,7 @@
         <summary class="faq-question">
           <span class="question-text">Apakah tarif sewa sudah termasuk BBM, Tol, dan Driver?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">
@@ -68,7 +81,7 @@
         <summary class="faq-question">
           <span class="question-text">Bagaimana prosedur pemesanan dan ketentuan DP reservasi?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">
@@ -80,7 +93,7 @@
         <summary class="faq-question">
           <span class="question-text">Bagaimana jika armada mengalami kendala mekanis atau darurat?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">
@@ -92,7 +105,7 @@
         <summary class="faq-question">
           <span class="question-text">Berapa lama durasi sewa per hari dan bagaimana biaya overtime-nya?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">
@@ -104,7 +117,7 @@
         <summary class="faq-question">
           <span class="question-text">Apakah armada Joya Rent Car bisa digunakan untuk perjalanan luar kota?</span>
           <span class="faq-icon-box">
-            <i data-icon="chevron-down"></i>
+            <span data-icon="chevron-down"></span>
           </span>
         </summary>
         <div class="faq-answer">

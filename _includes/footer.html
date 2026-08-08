@@ -1,3 +1,5 @@
+{% assign wa = site.data.contact_wa %}
+
 <!-- ===== SITE FOOTER ===== -->
 <footer class="site-footer" id="kontak-footer">
   <div class="container footer-container">
@@ -6,8 +8,8 @@
       
       <!-- Kolom 1: Profil Brand & Socials -->
       <div class="footer-col footer-brand animate-slideup">
-        <a href="/" class="footer-logo">
-          <img src="/assets/images/logo.png" alt="Joya Rent Car Logo" width="160" height="45">
+        <a href="{{ '/' | relative_url }}" class="footer-logo">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Joya Rent Car Logo" width="160" height="45">
         </a>
         <p class="brand-desc">
           Penyedia jasa rental mobil mewah, VIP, dan operasional harian terpercaya. Mengedepankan kenyamanan, keamanan, dan pelayanan prima 24/7.
@@ -17,38 +19,36 @@
           <span>Armada Tercover Asuransi & Terawat</span>
         </div>
         <div class="footer-socials">
-          {% assign wa = site.data.contact_wa %}
-
-          <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="social-link" target="_blank" rel="noopener">
+          <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
             <span data-icon="whatsapp"></span>
           </a>
-          <a href="https://instagram.com" aria-label="Instagram" class="social-link">
+          <a href="https://instagram.com" aria-label="Instagram" class="social-link" target="_blank" rel="noopener">
             <span data-icon="instagram"></span>
           </a>
-          <a href="https://facebook.com" aria-label="Instagram" class="social-link">
+          <a href="https://facebook.com" aria-label="Facebook" class="social-link" target="_blank" rel="noopener">
             <span data-icon="facebook"></span>
           </a>
-          <a href="https://tiktok.com" aria-label="Instagram" class="social-link">
+          <a href="https://tiktok.com" aria-label="TikTok" class="social-link" target="_blank" rel="noopener">
             <span data-icon="tiktok"></span>
           </a>
-          <a href="https://youtube.com" aria-label="Instagram" class="social-link">
+          <a href="https://youtube.com" aria-label="YouTube" class="social-link" target="_blank" rel="noopener">
             <span data-icon="youtube"></span>
           </a>
-          <a href="/kontak/" aria-label="Kontak" class="social-link">
+          <a href="#kontak-footer" aria-label="Kontak" class="social-link">
             <span data-icon="kontak"></span>
           </a>
         </div>
       </div>
 
-      <!-- Kolom 2: Navigasi Cepat (Sesuai Header) -->
+      <!-- Kolom 2: Navigasi Cepat -->
       <div class="footer-col animate-slideup">
         <h4 class="footer-heading">Navigasi</h4>
         <ul class="footer-links">
-          <li><a href="#"><span data-icon="home"></span> Beranda</a></li>
+          <li><a href="{{ '/' | relative_url }}"><span data-icon="home"></span> Beranda</a></li>
           <li><a href="#armada"><span data-icon="armada"></span> Armada</a></li>
           <li><a href="#tentang-kami"><span data-icon="tentang"></span> Tentang</a></li>
           <li><a href="#faq"><span data-icon="sparkles"></span> Tanya/Jawab</a></li>
-          <li><a href="#kontak"><span data-icon="kontak"></span> Kontak</a></li>
+          <li><a href="#kontak-footer"><span data-icon="kontak"></span> Kontak</a></li>
         </ul>
       </div>
 
@@ -67,7 +67,7 @@
             <span data-icon="kontak"></span>
             <div>
               <strong>Telepon / WhatsApp:</strong>
-              <p>+62 812-3456-789</p>
+              <p>+{{ wa.phone }}</p>
             </div>
           </div>
           <div class="info-item">
@@ -105,7 +105,7 @@
     <!-- Bottom Bar / Copyright -->
     <div class="footer-bottom">
       <p class="copyright-text">
-        &copy; 2026 <strong>Joya Rent Car</strong>. All Rights Reserved.
+        &copy; {{ 'now' | date: "%Y" }} <strong>Joya Rent Car</strong>. All Rights Reserved.
       </p>
       <div class="bottom-links">
         <a href="#">Syarat & Ketentuan</a>

@@ -12,7 +12,7 @@
         {% for client in site.data.clients %}
         <div class="client-card">
           <img 
-            src="{{ client.logo }}" 
+            src="{{ client.logo | relative_url }}" 
             alt="{{ client.name }}" 
             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
             loading="lazy"

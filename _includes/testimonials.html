@@ -1,22 +1,22 @@
 <section class="testimonials-section" id="testimoni">
   <div class="container">
     
-    <div class="section-header animate-slideup">
-      <div class="about-badge">
+    <div class="section-header">
+      <div class="about-badge animate-slideup">
         <span data-icon="star"></span>
         <span>Ulasan Pelanggan</span>
       </div>
-      <h2 class="section-title">
+      <h2 class="section-title animate-slideup">
         Kata Mereka Tentang <br><span class="text-gold">Joya Rent Car</span>
       </h2>
-      <p class="section-subtitle">
+      <p class="section-subtitle animate-slideup">
         Kepuasan dan kenyamanan Anda adalah prioritas utama dalam setiap layanan kami.
       </p>
     </div>
 
-    <div class="testimonials-grid animate-slideup delay-100">
+    <div class="testimonials-grid">
       {% for item in site.data.testimonials %}
-      <div class="testimonial-card">
+      <div class="testimonial-card animate-slideup">
         <div class="testimonial-top">
           <div class="testimonial-rating">
             {% for i in (1..item.rating) %}

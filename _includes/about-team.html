@@ -6,30 +6,30 @@
     <div class="about-team-grid">
       
       <!-- Kolom Kiri: Informasi & Manajemen -->
-      <div class="about-col animate-slideup delay-100">
+      <div class="about-col">
         <div class="about-header">
-          <div class="about-badge">
+          <div class="about-badge animate-slideup">
             <span data-icon="shield-check"></span>
             <span>Tentang Joya Rent Car</span>
           </div>
-          <h2 class="about-title">
+          <h2 class="about-title animate-slideup">
             Pelayanan Sepenuh Hati, <br><span class="text-gold">Perjalanan Tanpa Khawatir</span>
           </h2>
         </div>
         
-        <p class="about-desc">
+        <p class="about-desc animate-slideup">
           Joya Rent Car hadir sebagai penyedia jasa sewa mobil terpercaya di Indonesia. Kami berkomitmen menyajikan armada yang selalu bersih, prima, dan siap jalan untuk kebutuhan dinas, bisnis, pernikahan, hingga liburan keluarga.
         </p>
 
         <div class="management-group">
-          <div class="management-title-wrapper">
+          <div class="management-title-wrapper animate-slideup">
             <span data-icon="user-group"></span>
             <h3 class="management-title">Manajemen & Pengelola</h3>
           </div>
           
           <div class="management-cards">
             {% for item in site.data.team.management %}
-            <div class="mgmt-card">
+            <div class="mgmt-card animate-slideup">
               <div class="mgmt-avatar">
                 <img 
                   src="{{ item.photo }}" 
@@ -62,22 +62,22 @@
       </div>
 
       <!-- Kolom Kanan: Pengemudi -->
-      <div class="drivers-col animate-slideup delay-200">
+      <div class="drivers-col">
         <div class="drivers-header">
           <div>
-            <div class="about-badge">
+            <div class="about-badge animate-slideup">
               <span data-icon="steering-wheel"></span>
               <span>Driver Handal</span>
             </div>
-            <h3 class="drivers-title">Profil Pengemudi Profesional</h3>
+            <h3 class="drivers-title animate-slideup">Profil Pengemudi Profesional</h3>
           </div>
-          <p class="drivers-subtext">
+          <p class="drivers-subtext animate-slideup">
             <span>Geser</span>
             <span data-icon="arrow-right" class="swipe-hint"></span>
           </p>
         </div>
 
-        <div class="drivers-scroll-wrapper">
+        <div class="drivers-scroll-wrapper animate-slideup">
           {% for driver in site.data.team.drivers %}
           <div class="driver-card">
             <div class="driver-img-box">

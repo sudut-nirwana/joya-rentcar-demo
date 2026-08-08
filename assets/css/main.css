@@ -174,405 +174,6 @@ button, input, select, textarea {
     transform: none !important;
   }
 }
-/* Base Rules */
-/* ==========================================================================
-   #01 ICON
-   Cara pake: <i class="sn-icon" data-icon="whatsapp"></i>
-   Fungsi   : Mengatur ukuran SVG agar responsif mengikuti font-size & warna parent.
-   ========================================================================== */
-.sn-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  color: currentColor;
-  flex-shrink: 0;
-}
-.sn-icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ==========================================================================
-   #02 ANIMATION UTILITIES
-   Cara pake (Single Item)   : <div class="sn-animate-slideup">
-   Cara pake (Manual Delay)  : <div class="sn-animate-slideup delay-200">
-   Cara pake (Auto Stagger)  : Pasang class "sn-stagger" di kontainer induk (Lihat #02.4)
-   Fungsi                    : Animasi muncul saat di-scroll (dikontrol JS via .is-visible).
-   ========================================================================== */
-[class*=sn-animate-] {
-  opacity: 0;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* #02.1 Varian Animasi */
-.sn-animate-slideup {
-  transform: translateY(35px);
-}
-
-.sn-animate-slidedown {
-  transform: translateY(-35px);
-}
-
-.sn-animate-slideleft {
-  transform: translateX(40px);
-}
-
-.sn-animate-slideright {
-  transform: translateX(-40px);
-}
-
-.sn-animate-fadein {
-  transform: translateY(0);
-}
-
-.sn-animate-zoomin {
-  transform: scale(0.92);
-}
-
-/* #02.2 State Visible (Ditrigger oleh IntersectionObserver JS) */
-.is-visible {
-  opacity: 1;
-  transform: translate(0) scale(1);
-}
-
-/* #02.3 Manual Delay Utilities */
-.delay-100 {
-  transition-delay: 0.1s;
-}
-
-.delay-200 {
-  transition-delay: 0.2s;
-}
-
-.delay-300 {
-  transition-delay: 0.3s;
-}
-
-.delay-400 {
-  transition-delay: 0.4s;
-}
-
-.delay-500 {
-  transition-delay: 0.5s;
-}
-
-/* #02.4 Auto Stagger (Animasi Berurutan Otomatis Tanpa Class Delay)
-   Cara pake: <div class="card-grid sn-stagger">
-                <div class="card sn-animate-slideup">Card 1</div>
-                <div class="card sn-animate-slideup">Card 2</div>
-                <div class="card sn-animate-slideup">Card 3</div>
-              </div>
-   Fungsi   : Memberi jeda waktu otomatis antar elemen anak (anak ke-1 delay 0.08s, ke-2 delay 0.16s, dst). */
-.sn-stagger > *:nth-child(1) {
-  transition-delay: 0.08s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(2) {
-  transition-delay: 0.16s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(3) {
-  transition-delay: 0.24s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(4) {
-  transition-delay: 0.32s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(5) {
-  transition-delay: 0.4s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(6) {
-  transition-delay: 0.48s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(7) {
-  transition-delay: 0.56s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(8) {
-  transition-delay: 0.64s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(9) {
-  transition-delay: 0.72s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(10) {
-  transition-delay: 0.8s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(11) {
-  transition-delay: 0.88s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(12) {
-  transition-delay: 0.96s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(13) {
-  transition-delay: 1.04s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(14) {
-  transition-delay: 1.12s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger > *:nth-child(15) {
-  transition-delay: 1.2s; /* Jeda default: 80ms antar elemen */
-}
-.sn-stagger {
-  /* Varian Cepat (Jeda 40ms) -> <div class="grid sn-stagger is-fast"> */
-}
-.sn-stagger.is-fast > *:nth-child(1) {
-  transition-delay: 0.04s;
-}
-.sn-stagger.is-fast > *:nth-child(2) {
-  transition-delay: 0.08s;
-}
-.sn-stagger.is-fast > *:nth-child(3) {
-  transition-delay: 0.12s;
-}
-.sn-stagger.is-fast > *:nth-child(4) {
-  transition-delay: 0.16s;
-}
-.sn-stagger.is-fast > *:nth-child(5) {
-  transition-delay: 0.2s;
-}
-.sn-stagger.is-fast > *:nth-child(6) {
-  transition-delay: 0.24s;
-}
-.sn-stagger.is-fast > *:nth-child(7) {
-  transition-delay: 0.28s;
-}
-.sn-stagger.is-fast > *:nth-child(8) {
-  transition-delay: 0.32s;
-}
-.sn-stagger.is-fast > *:nth-child(9) {
-  transition-delay: 0.36s;
-}
-.sn-stagger.is-fast > *:nth-child(10) {
-  transition-delay: 0.4s;
-}
-.sn-stagger.is-fast > *:nth-child(11) {
-  transition-delay: 0.44s;
-}
-.sn-stagger.is-fast > *:nth-child(12) {
-  transition-delay: 0.48s;
-}
-.sn-stagger.is-fast > *:nth-child(13) {
-  transition-delay: 0.52s;
-}
-.sn-stagger.is-fast > *:nth-child(14) {
-  transition-delay: 0.56s;
-}
-.sn-stagger.is-fast > *:nth-child(15) {
-  transition-delay: 0.6s;
-}
-.sn-stagger {
-  /* Varian Lambat (Jeda 150ms) -> <div class="grid sn-stagger is-slow"> */
-}
-.sn-stagger.is-slow > *:nth-child(1) {
-  transition-delay: 0.15s;
-}
-.sn-stagger.is-slow > *:nth-child(2) {
-  transition-delay: 0.3s;
-}
-.sn-stagger.is-slow > *:nth-child(3) {
-  transition-delay: 0.45s;
-}
-.sn-stagger.is-slow > *:nth-child(4) {
-  transition-delay: 0.6s;
-}
-.sn-stagger.is-slow > *:nth-child(5) {
-  transition-delay: 0.75s;
-}
-.sn-stagger.is-slow > *:nth-child(6) {
-  transition-delay: 0.9s;
-}
-.sn-stagger.is-slow > *:nth-child(7) {
-  transition-delay: 1.05s;
-}
-.sn-stagger.is-slow > *:nth-child(8) {
-  transition-delay: 1.2s;
-}
-.sn-stagger.is-slow > *:nth-child(9) {
-  transition-delay: 1.35s;
-}
-.sn-stagger.is-slow > *:nth-child(10) {
-  transition-delay: 1.5s;
-}
-.sn-stagger.is-slow > *:nth-child(11) {
-  transition-delay: 1.65s;
-}
-.sn-stagger.is-slow > *:nth-child(12) {
-  transition-delay: 1.8s;
-}
-.sn-stagger.is-slow > *:nth-child(13) {
-  transition-delay: 1.95s;
-}
-.sn-stagger.is-slow > *:nth-child(14) {
-  transition-delay: 2.1s;
-}
-.sn-stagger.is-slow > *:nth-child(15) {
-  transition-delay: 2.25s;
-}
-
-/* ==========================================================================
-   #03 GOLD EFFECTS
-   Cara pake: <h1 class="sn-text-gradient">Teks Emas Shimmer</h1>
-              <div class="glow-gold-pulse">Kotak Glowing Emas</div>
-   Fungsi   : Efek gradasi berkilau berjalan dan pendaran glow pada box.
-   ========================================================================== */
-.sn-text-gradient {
-  background: linear-gradient(90deg, var(--color-gold-primary), #FFD700, var(--color-gold-primary));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: goldShimmer 3s linear infinite;
-}
-
-@keyframes goldShimmer {
-  to {
-    background-position: 200% center;
-  }
-}
-.glow-gold-pulse {
-  animation: goldPulse 3s infinite ease-in-out;
-}
-
-@keyframes goldPulse {
-  0%, 100% {
-    box-shadow: var(--shadow-gold-glow);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(192, 159, 80, 0.4);
-  }
-}
-/* ==========================================================================
-   #04 SN THREAD - VERSI FULL DIAGONAL
-   Cara pake: <div class="testimonial-card sn-thread-gold">...</div>
-   Fungsi   : Hiasan motif benang emas melintang diagonal + kilau sparkle.
-   ========================================================================== */
-.sn-thread-gold {
-  --sn-thread-dark: #936521;
-  --sn-thread-base: #c09f50;
-  --sn-thread-light: #f6e58d;
-  --sn-thread-glow: rgba(192, 159, 80, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-.sn-thread-gold::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='tg1' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='currentColor' stop-opacity='0'/%3E%3Cstop offset='25%25' stop-color='currentColor' stop-opacity='0.5'/%3E%3Cstop offset='60%25' stop-color='currentColor' stop-opacity='0.9'/%3E%3Cstop offset='85%25' stop-color='currentColor' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='currentColor' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='tg2' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='currentColor' stop-opacity='0'/%3E%3Cstop offset='35%25' stop-color='currentColor' stop-opacity='0.75'/%3E%3Cstop offset='75%25' stop-color='currentColor' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='currentColor' stop-opacity='0'/%3E%3C/linearGradient%3E%3CradialGradient id='tsparkle'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Cstop offset='25%25' stop-color='currentColor' stop-opacity='0.8'/%3E%3Cstop offset='60%25' stop-color='currentColor' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='currentColor' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath d='M-20 170 C 70 90, 160 190, 320 45' stroke='url(%23tg1)' stroke-width='1.4' stroke-linecap='round'/%3E%3Cpath d='M0 190 C 85 115, 175 205, 320 75' stroke='url(%23tg2)' stroke-width='1.1' stroke-dasharray='3 5' stroke-linecap='round'/%3E%3Cpath d='M30 205 C 110 75, 190 155, 320 20' stroke='url(%23tg1)' stroke-width='0.8' stroke-opacity='0.5'/%3E%3Ccircle cx='60' cy='122' r='4' fill='url(%23tsparkle)'/%3E%3Ccircle cx='122' cy='142' r='3' fill='url(%23tsparkle)'/%3E%3Ccircle cx='188' cy='158' r='4.5' fill='url(%23tsparkle)'/%3E%3Ccircle cx='222' cy='95' r='3.5' fill='url(%23tsparkle)'/%3E%3Ccircle cx='278' cy='68' r='5' fill='url(%23tsparkle)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: cover;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: drop-shadow(0 0 4px var(--sn-thread-glow));
-  animation: threadGlowPulse 5s ease-in-out infinite alternate;
-  z-index: 1;
-  color: var(--sn-thread-base);
-}
-
-@keyframes threadGlowPulse {
-  0% {
-    opacity: 0.55;
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    opacity: 0.8;
-    transform: translate3d(-2px, -3px, 0);
-  }
-}
-/* ==========================================================================
-   #05 SN THREAD - VERSI BAWAH MELENGKUNG
-   Cara pake: <div class="service-card sn-thread-gold-bottom">...</div>
-   Fungsi   : Hiasan benang emas melengkung halus di area bawah kartu/box.
-   ========================================================================== */
-.sn-thread-gold-bottom {
-  --sn-thread-dark: #936521;
-  --sn-thread-base: #c09f50;
-  --sn-thread-light: #f6e58d;
-  --sn-thread-glow: rgba(192, 159, 80, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-.sn-thread-gold-bottom::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 48' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='tgb1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='currentColor' stop-opacity='0'/%3E%3Cstop offset='25%25' stop-color='currentColor' stop-opacity='0.9'/%3E%3Cstop offset='75%25' stop-color='currentColor' stop-opacity='0.9'/%3E%3Cstop offset='100%25' stop-color='currentColor' stop-opacity='0'/%3E%3C/linearGradient%3E%3CradialGradient id='tgsparkle'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Cstop offset='50%25' stop-color='currentColor' stop-opacity='0.8'/%3E%3Cstop offset='100%25' stop-color='currentColor' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath d='M0 38 C 100 12, 200 44, 400 28' stroke='url(%23tgb1)' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3Cpath d='M0 43 C 120 18, 240 46, 400 33' stroke='url(%23tgb1)' stroke-width='0.9' stroke-dasharray='4 6' stroke-opacity='0.7'/%3E%3Ccircle cx='120' cy='20' r='2.5' fill='url(%23tgsparkle)'/%3E%3Ccircle cx='280' cy='30' r='3' fill='url(%23tgsparkle)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
-  opacity: 0.85;
-  filter: drop-shadow(0 0 5px var(--sn-thread-glow));
-  z-index: 2;
-  color: var(--sn-thread-base);
-  transition: opacity 0.35s ease;
-}
-.sn-thread-gold-bottom:hover::before {
-  opacity: 1;
-}
-
-/* ==========================================================================
-   #06 SN BACKGROUND PATTERN
-   Cara pake: <section class="sn-bg-pattern-gold">...</section>
-              <section class="sn-bg-pattern-dots">...</section>
-   Fungsi   : Pola latar transparan berulang dengan masking gradasi halus atas-bawah.
-   ========================================================================== */
-.sn-bg-pattern-gold {
-  position: relative;
-  overflow: hidden;
-}
-.sn-bg-pattern-gold::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.3;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='currentColor' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: 28px 49px;
-  background-repeat: repeat;
-  color: var(--color-gold-primary);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 90%, transparent 100%);
-}
-
-.sn-bg-pattern-dots {
-  position: relative;
-  overflow: hidden;
-}
-.sn-bg-pattern-dots::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.15;
-  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
-  color: var(--color-gold-primary);
-}
-
-/* ==========================================================================
-   #07 ACCESSIBILITY
-   Fungsi   : Otomatis mematikan animasi saat user mengaktifkan pengaturan "Reduce Motion".
-   ========================================================================== */
-@media (prefers-reduced-motion: reduce) {
-  [class*=sn-animate-] {
-    transition: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  .sn-stagger > * {
-    transition-delay: 0s !important;
-  }
-  .sn-text-gradient,
-  .glow-gold-pulse,
-  .sn-thread-gold::before,
-  .sn-thread-gold-bottom::before {
-    animation: none !important;
-  }
-}
 /* Components Rules */
 /* Base Rules */
 /* Splash Screen Component */
@@ -1894,7 +1495,7 @@ button, input, select, textarea {
   opacity: 0.3;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.3' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: 28px 49px;
-  /* Masking gradasi: samar di atas (0%), jelas di tengah (20%-80%), samar lagi di bawah (100%) */
+  /* Masking gradasi */
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.7) 90%, transparent 100%);
 }
@@ -1928,19 +1529,20 @@ button, input, select, textarea {
   gap: 14px;
 }
 
+/* Badge Atas - Tanpa Blur */
 .about-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(39, 39, 39, 0.5);
-  border: 1px solid rgba(192, 159, 80, 0.35);
+  /* Menggunakan warna gelap solid pekat (92%) & bayangan halus */
+  background: rgba(26, 26, 26, 0.92);
+  border: 1px solid rgba(192, 159, 80, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   font-size: 0.825rem;
   font-weight: 500;
   color: var(--color-gold-light);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 .about-badge [data-icon] {
   color: var(--color-gold-primary);
@@ -2126,7 +1728,6 @@ button, input, select, textarea {
   gap: 14px;
   overflow-x: auto;
   scroll-snap-type: x proximity;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y;
   overscroll-behavior-x: contain;
@@ -2177,19 +1778,22 @@ button, input, select, textarea {
   height: 100%;
   object-fit: cover;
 }
+.driver-img-box {
+  /* Badge Pengalaman - Tanpa Blur */
+}
 .driver-img-box .driver-exp-badge {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: var(--color-overlay);
-  border: 1px solid rgba(192, 159, 80, 0.35);
+  /* Latar belakang gelap 88% + shadow kontras */
+  background: rgba(18, 18, 18, 0.88);
+  border: 1px solid rgba(192, 159, 80, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   color: var(--color-gold-light);
   font-size: 0.7rem;
   font-weight: 600;
   padding: 3px 8px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -2422,7 +2026,10 @@ button, input, select, textarea {
   border: 1px solid var(--color-border);
   border-radius: 14px;
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  /* Isolasi GPU layer untuk setiap kartu */
+  transform: translateZ(0);
+  backface-visibility: hidden;
   /* Layer 1: Paduan 3 Benang Emas Multi-Stop Gradient + Radial Sparkle Nodes */
 }
 .testimonial-card::before {
@@ -2432,17 +2039,18 @@ button, input, select, textarea {
   right: 0;
   bottom: 0;
   left: 0;
-  /* Vector SVG: Gradasi Panjang (Fade-in -> Gold Bright -> Fade-out) & Radial Sparkle Glow */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='goldGrad1' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23936521' stop-opacity='0'/%3E%3Cstop offset='25%25' stop-color='%23c09f50' stop-opacity='0.5'/%3E%3Cstop offset='60%25' stop-color='%23f6e58d' stop-opacity='0.9'/%3E%3Cstop offset='85%25' stop-color='%23c09f50' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='%23936521' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='goldGrad2' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23c09f50' stop-opacity='0'/%3E%3Cstop offset='35%25' stop-color='%23f6e58d' stop-opacity='0.75'/%3E%3Cstop offset='75%25' stop-color='%23c09f50' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='%23936521' stop-opacity='0'/%3E%3C/linearGradient%3E%3CradialGradient id='sparkleGlow'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Cstop offset='25%25' stop-color='%23f6e58d' stop-opacity='0.8'/%3E%3Cstop offset='60%25' stop-color='%23c09f50' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='%23c09f50' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3C!-- Benang 1: Utama Solid Gradasi Lengkung --%3E%3Cpath d='M-20 170 C 70 90, 160 190, 320 45' stroke='url(%23goldGrad1)' stroke-width='1.4' stroke-linecap='round'/%3E%3C!-- Benang 2: Motif Dotted Putus-Putus Bergradasi --%3E%3Cpath d='M0 190 C 85 115, 175 205, 320 75' stroke='url(%23goldGrad2)' stroke-width='1.1' stroke-dasharray='3 5' stroke-linecap='round'/%3E%3C!-- Benang 3: Akses Tipis Sutra Meliuk --%3E%3Cpath d='M30 205 C 110 75, 190 155, 320 20' stroke='url(%23goldGrad1)' stroke-width='0.8' stroke-opacity='0.5'/%3E%3C!-- Sparkles / Cahaya Glowing Pendar Halus Nempel di Benang --%3E%3Ccircle cx='60' cy='122' r='4' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='122' cy='142' r='3' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='188' cy='158' r='4.5' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='222' cy='95' r='3.5' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='278' cy='68' r='5' fill='url(%23sparkleGlow)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='goldGrad1' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23936521' stop-opacity='0'/%3E%3Cstop offset='25%25' stop-color='%23c09f50' stop-opacity='0.5'/%3E%3Cstop offset='60%25' stop-color='%23f6e58d' stop-opacity='0.9'/%3E%3Cstop offset='85%25' stop-color='%23c09f50' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='%23936521' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='goldGrad2' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23c09f50' stop-opacity='0'/%3E%3Cstop offset='35%25' stop-color='%23f6e58d' stop-opacity='0.75'/%3E%3Cstop offset='75%25' stop-color='%23c09f50' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='%23936521' stop-opacity='0'/%3E%3C/linearGradient%3E%3CradialGradient id='sparkleGlow'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Cstop offset='25%25' stop-color='%23f6e58d' stop-opacity='0.8'/%3E%3Cstop offset='60%25' stop-color='%23c09f50' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='%23c09f50' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath d='M-20 170 C 70 90, 160 190, 320 45' stroke='url(%23goldGrad1)' stroke-width='1.4' stroke-linecap='round'/%3E%3Cpath d='M0 190 C 85 115, 175 205, 320 75' stroke='url(%23goldGrad2)' stroke-width='1.1' stroke-dasharray='3 5' stroke-linecap='round'/%3E%3Cpath d='M30 205 C 110 75, 190 155, 320 20' stroke='url(%23goldGrad1)' stroke-width='0.8' stroke-opacity='0.5'/%3E%3Ccircle cx='60' cy='122' r='4' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='122' cy='142' r='3' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='188' cy='158' r='4.5' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='222' cy='95' r='3.5' fill='url(%23sparkleGlow)'/%3E%3Ccircle cx='278' cy='68' r='5' fill='url(%23sparkleGlow)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
   pointer-events: none;
-  opacity: 0.65; /* Diturunkan agar membaur elegan sebagai watermark mewah */
-  filter: drop-shadow(0 0 4px rgba(192, 159, 80, 0.3));
+  opacity: 0.65;
+  /* Dihapus: filter: drop-shadow(...) agar GPU tidak pingsan */
   will-change: opacity, transform;
   animation: threadGlowPulse 5s ease-in-out infinite alternate;
   z-index: 1;
+  transform: translateZ(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 .testimonial-card {
   /* Layer 2: Ambient Sparkle Melayang di Latar Belakang */
@@ -2455,20 +2063,21 @@ button, input, select, textarea {
   background-repeat: no-repeat;
   pointer-events: none;
   opacity: 0.35;
-  will-change: transform, opacity;
+  will-change: opacity, transform;
   animation: goldFireflies 7s ease-in-out infinite alternate;
   z-index: 1;
+  transform: translateZ(0);
+  transition: opacity 0.4s ease;
 }
 .testimonial-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) translateZ(0);
   border-color: rgba(192, 159, 80, 0.8);
   background-color: var(--color-card-hover);
   box-shadow: var(--shadow-gold-glow);
 }
 .testimonial-card:hover::before {
-  opacity: 0.9;
-  transform: scale(1.04);
-  filter: drop-shadow(0 0 7px rgba(246, 229, 141, 0.5));
+  opacity: 0.95;
+  transform: scale(1.03) translateZ(0);
 }
 .testimonial-card:hover::after {
   opacity: 0.65;
@@ -2479,29 +2088,29 @@ button, input, select, textarea {
   }
 }
 
-/* Animasi Denyut Cahaya Benang (Smooth GPU Rendition) */
+/* Animasi Denyut Cahaya Benang (Hanya Memakai Transform 3D & Opacity) */
 @keyframes threadGlowPulse {
   0% {
     opacity: 0.55;
     transform: translate3d(0, 0, 0);
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.85;
     transform: translate3d(-2px, -3px, 0);
   }
 }
-/* Animasi Kunang-Kunang Ambient Melayang */
+/* Animasi Kunang-Kunang Ambient Melayang (Dioptimalkan tanpa scale ekstrem) */
 @keyframes goldFireflies {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0);
     opacity: 0.25;
   }
   50% {
-    transform: translate3d(-5px, -8px, 0) scale(1.05);
+    transform: translate3d(-4px, -6px, 0);
     opacity: 0.6;
   }
   100% {
-    transform: translate3d(5px, -15px, 0) scale(0.95);
+    transform: translate3d(4px, -12px, 0);
     opacity: 0.3;
   }
 }
@@ -3172,5 +2781,12 @@ button, input, select, textarea {
 .footer-bottom .bottom-links .dot {
   color: var(--color-border);
 }
+
+/* npx sass --load-path=_sass assets/css/main.scss assets/css/main.css
+
+auto update
+npx sass --load-path=_sass --watch assets/css/main.scss:assets/css/main.css &
+
+*/
 
 /*# sourceMappingURL=main.css.map */

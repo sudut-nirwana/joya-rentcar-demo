@@ -2,7 +2,6 @@
 @use "base/variables" as *;
 @use "base/reset";
 @use "base/animations";
-@use "base/utilities-sn";
 
 /* Components Rules */
 @use "components/splash";
@@ -15,3 +14,10 @@
 @use "components/testimonials";
 @use "components/faq";
 @use "components/footer";
+
+/* npx sass --load-path=_sass assets/css/main.scss assets/css/main.css
+
+auto update
+npx sass --load-path=_sass --watch assets/css/main.scss:assets/css/main.css &
+
+*/

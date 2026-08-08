@@ -1,0 +1,118 @@
+<!-- ===== SITE FOOTER ===== -->
+<footer class="site-footer" id="kontak-footer">
+  <div class="container footer-container">
+    
+    <div class="footer-grid">
+      
+      <!-- Kolom 1: Profil Brand & Socials -->
+      <div class="footer-col footer-brand animate-slideup">
+        <a href="/" class="footer-logo">
+          <img src="/assets/images/logo.png" alt="Joya Rent Car Logo" width="160" height="45">
+        </a>
+        <p class="brand-desc">
+          Penyedia jasa rental mobil mewah, VIP, dan operasional harian terpercaya. Mengedepankan kenyamanan, keamanan, dan pelayanan prima 24/7.
+        </p>
+        <div class="footer-badge">
+          <span data-icon="shield-check"></span>
+          <span>Armada Tercover Asuransi & Terawat</span>
+        </div>
+        <div class="footer-socials">
+          {% assign wa = site.data.contact_wa %}
+
+          <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="social-link" target="_blank" rel="noopener">
+            <span data-icon="whatsapp"></span>
+          </a>
+          <a href="https://instagram.com" aria-label="Instagram" class="social-link">
+            <span data-icon="instagram"></span>
+          </a>
+          <a href="https://facebook.com" aria-label="Instagram" class="social-link">
+            <span data-icon="facebook"></span>
+          </a>
+          <a href="https://tiktok.com" aria-label="Instagram" class="social-link">
+            <span data-icon="tiktok"></span>
+          </a>
+          <a href="https://youtube.com" aria-label="Instagram" class="social-link">
+            <span data-icon="youtube"></span>
+          </a>
+          <a href="/kontak/" aria-label="Kontak" class="social-link">
+            <span data-icon="kontak"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom 2: Navigasi Cepat (Sesuai Header) -->
+      <div class="footer-col animate-slideup">
+        <h4 class="footer-heading">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="#"><span data-icon="home"></span> Beranda</a></li>
+          <li><a href="#armada"><span data-icon="armada"></span> Armada</a></li>
+          <li><a href="#tentang-kami"><span data-icon="tentang"></span> Tentang</a></li>
+          <li><a href="#faq"><span data-icon="sparkles"></span> Tanya/Jawab</a></li>
+          <li><a href="#kontak"><span data-icon="kontak"></span> Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Layanan & Informasi Kontak -->
+      <div class="footer-col animate-slideup">
+        <h4 class="footer-heading">Kontak & Operasional</h4>
+        <div class="contact-info-list">
+          <div class="info-item">
+            <span data-icon="headset"></span>
+            <div>
+              <strong>Layanan Customer Service:</strong>
+              <p>24 Jam Nonstop (Setiap Hari)</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span data-icon="kontak"></span>
+            <div>
+              <strong>Telepon / WhatsApp:</strong>
+              <p>+62 812-3456-789</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span data-icon="reservasi"></span>
+            <div>
+              <strong>Garasi & Office:</strong>
+              <p>Jl. Raya Utama No. 88, Jakarta Selatan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom 4: Widget Iframe Google Maps -->
+      <div class="footer-col footer-map-col animate-slideup">
+        <h4 class="footer-heading">Lokasi Garasi Kami</h4>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.28318880126!2d106.78918235000001!3d-6.229728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%20South%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Joya Rent Car">
+          </iframe>
+        </div>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="map-direct-link">
+          <span data-icon="arrow-right"></span> Buka Petunjuk Arah di Maps
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar / Copyright -->
+    <div class="footer-bottom">
+      <p class="copyright-text">
+        &copy; 2026 <strong>Joya Rent Car</strong>. All Rights Reserved.
+      </p>
+      <div class="bottom-links">
+        <a href="#">Syarat & Ketentuan</a>
+        <span class="dot">•</span>
+        <a href="#">Kebijakan Privasi</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

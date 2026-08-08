@@ -1,0 +1,20 @@
+- name: "Kementerian PUPR"
+  logo: "/assets/images/clients/pupr.png"
+
+- name: "PERTAMINA"
+  logo: "/assets/images/clients/pertamina.png"
+
+- name: "POLDA METRO JAYA"
+  logo: "/assets/images/clients/polda.png"
+
+- name: "KEMENDIKBUD"
+  logo: "/assets/images/clients/kemendikbud.png"
+
+- name: "Event Bhayangkari"
+  logo: "/assets/images/clients/bhayangkari.png"
+
+- name: "Hotel Sultan"
+  logo: "/assets/images/clients/hotel-sultan.png"
+
+- name: "Hotel Mulia"
+  logo: "/assets/images/clients/hotel-mulia.png"

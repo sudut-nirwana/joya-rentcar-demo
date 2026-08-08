@@ -1,0 +1,59 @@
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section">
+  <!-- Cahaya Siluet & Dot Pattern Background -->
+  <div class="hero-glow-bg"></div>
+  <div class="hero-dot-bg"></div>
+
+  <div class="container hero-container">
+    
+    <!-- Kolom Kiri: Content -->
+    <div class="hero-content">
+      <div class="hero-badge animate-slideup delay-100">
+        <span data-icon="sparkles"></span>
+        <span>Rental Mobil Profesional & Terpercaya</span>
+      </div>
+      
+      <h1 class="hero-title animate-slideup delay-200">
+        Nikmati Perjalanan Yang <span class="text-gold">Mewah & Nyaman</span> Bersama Joya Rent Car</h1>
+      
+      <p class="hero-desc animate-slideup delay-300">
+        Sewa lepas kunci atau dengan driver profesional. Dengan Armada yang bersih, terawat, dan siap mengantar kebutuhan bisnis maupun liburan Anda.
+      </p>
+
+      <div class="hero-actions animate-slideup delay-400">
+        {% assign wa = site.data.contact_wa %}
+
+        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="btn-cta-gold glow-gold-pulse" target="_blank" rel="noopener">
+          <span data-icon="whatsapp"></span>
+          <span>Kontak Admin</span>
+        </a>
+        
+        <a href="#armada" class="btn-cta-outline">
+          <span data-icon="armada"></span>
+          <span>Pilihan Armada</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Kolom Kanan: Bento Grid Gambar -->
+    <div class="hero-bento-grid animate-zoomin delay-300">
+      <div class="bento-item bento-main">
+        <img src="/assets/images/hero1.webp" alt="Armada Premium Joya Rent Car" width="600" height="800" loading="eager">
+        <div class="bento-badge">Armada Premium</div>
+      </div>
+      
+      <div class="bento-side-stack">
+        <div class="bento-item bento-sub">
+          <img src="/assets/images/hero2.webp" alt="Interior Mewah Joya Rent Car" width="500" height="280" loading="lazy">
+          <div class="bento-badge">Interior Mewah</div>
+        </div>
+        
+        <div class="bento-item bento-sub">
+          <img src="/assets/images/hero3.webp" alt="Driver Profesional Joya Rent Car" width="500" height="280" loading="lazy">
+          <div class="bento-badge">Driver Profesional</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

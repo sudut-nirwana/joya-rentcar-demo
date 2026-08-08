@@ -1,0 +1,123 @@
+<!-- Tentang Kami & Pengelola -->
+<section class="about-team-section" id="tentang-kami">
+  <div class="about-bg-honeycomb"></div>
+
+  <div class="container relative-z">
+    <div class="about-team-grid">
+      
+      <!-- Kolom Kiri: Informasi & Manajemen -->
+      <div class="about-col animate-slideup delay-100">
+        <div class="about-header">
+          <div class="about-badge">
+            <span data-icon="shield-check"></span>
+            <span>Tentang Joya Rent Car</span>
+          </div>
+          <h2 class="about-title">
+            Pelayanan Sepenuh Hati, <br><span class="text-gold">Perjalanan Tanpa Khawatir</span>
+          </h2>
+        </div>
+        
+        <p class="about-desc">
+          Joya Rent Car hadir sebagai penyedia jasa sewa mobil terpercaya di Indonesia. Kami berkomitmen menyajikan armada yang selalu bersih, prima, dan siap jalan untuk kebutuhan dinas, bisnis, pernikahan, hingga liburan keluarga.
+        </p>
+
+        <div class="management-group">
+          <div class="management-title-wrapper">
+            <span data-icon="user-group"></span>
+            <h3 class="management-title">Manajemen & Pengelola</h3>
+          </div>
+          
+          <div class="management-cards">
+            {% for item in site.data.team.management %}
+            <div class="mgmt-card">
+              <div class="mgmt-avatar">
+                <img 
+                  src="{{ item.photo }}" 
+                  alt="{{ item.name }}" 
+                  onerror="this.src='https://ui-avatars.com/api/?name={{ item.name | url_encode }}&background=272727&color=c09f50'" 
+                  width="60" 
+                  height="60" 
+                  loading="lazy"
+                >
+                <span class="mgmt-tag {% if item.badge == 'Owner' %}gold{% endif %}">
+                  {% if item.badge == 'Owner' %}
+                    <span data-icon="crown"></span>
+                  {% elsif item.badge == 'Operational' %}
+                    <span data-icon="cog"></span>
+                  {% else %}
+                    <span data-icon="headset"></span>
+                  {% endif %}
+                  <span>{{ item.badge }}</span>
+                </span>
+              </div>
+              <div class="mgmt-info">
+                <h4 class="mgmt-name">{{ item.name }}</h4>
+                <span class="mgmt-role">{{ item.role }}</span>
+                <p class="mgmt-desc">{{ item.desc }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Pengemudi -->
+      <div class="drivers-col animate-slideup delay-200">
+        <div class="drivers-header">
+          <div>
+            <div class="about-badge">
+              <span data-icon="steering-wheel"></span>
+              <span>Driver Handal</span>
+            </div>
+            <h3 class="drivers-title">Profil Pengemudi Profesional</h3>
+          </div>
+          <p class="drivers-subtext">
+            <span>Geser</span>
+            <span data-icon="arrow-right" class="swipe-hint"></span>
+          </p>
+        </div>
+
+        <div class="drivers-scroll-wrapper">
+          {% for driver in site.data.team.drivers %}
+          <div class="driver-card">
+            <div class="driver-img-box">
+              <img 
+                src="{{ driver.photo }}" 
+                alt="{{ driver.name }}" 
+                onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80'" 
+                width="240" 
+                height="280" 
+                loading="lazy"
+              >
+              <div class="driver-exp-badge">
+                <span data-icon="badge-check"></span>
+                <span>{{ driver.experience }}</span>
+              </div>
+            </div>
+            
+            <div class="driver-details">
+              <div class="driver-head">
+                <h4 class="driver-name">{{ driver.name }}</h4>
+                <div class="driver-rating">
+                  <span data-icon="star"></span>
+                  <span>{{ driver.rating | replace: '/5.0', '' }}</span>
+                </div>
+              </div>
+              
+              <span class="driver-role">{{ driver.role }}</span>
+              <span class="driver-specialty">Unit: {{ driver.specialty }}</span>
+              
+              <div class="driver-tags">
+                {% for tag in driver.badges %}
+                  <span class="tag-item">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

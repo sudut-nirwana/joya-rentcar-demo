@@ -1,0 +1,332 @@
+@use 'base/variables' as *;
+
+/* ===== SITE FOOTER SECTION ===== */
+.site-footer {
+  position: relative;
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: 50px 0 24px 0;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+
+  @media (min-width: calc(#{$bp-tablet} + 1px)) {
+    padding: 70px 0 32px 0;
+  }
+
+  /* Overlay Motif Sarang Tawon (Honeycomb) */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.30;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 28px 49px;
+
+    /* Masking gradasi: samar di atas (0%), jelas di tengah (20%-80%), samar lagi di bawah (100%) */
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.7) 20%,
+      rgba(0, 0, 0, 0.7) 80%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.7) 20%,
+      rgba(0, 0, 0, 0.7) 80%,
+      transparent 100%
+    );
+  }
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media (min-width: calc(#{$bp-tablet} + 1px)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  @media (min-width: calc(#{$bp-desktop-sm} + 1px)) {
+    grid-template-columns: 1.2fr 0.8fr 1.1fr 1.2fr;
+    gap: 32px;
+  }
+}
+
+/* Footer Section Headings */
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gold-primary), var(--color-gold-dark));
+    border-radius: 2px;
+  }
+}
+
+/* Kolom 1: Brand Profile & Socials */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .footer-logo {
+    display: inline-block;
+    
+    img {
+      width: 140px;
+      height: auto;
+    }
+  }
+
+  .brand-desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .footer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-gold-light);
+    background: rgba(39, 39, 39, 0.6);
+    border: 1px solid rgba(192, 159, 80, 0.35);
+    padding: 6px 12px;
+    border-radius: 8px;
+    width: fit-content;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    [data-icon] {
+      color: var(--color-gold-primary);
+      font-size: 0.95rem;
+    }
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-primary);
+      transition: all 0.3s ease;
+
+      [data-icon] {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background: var(--color-gold-primary);
+        border-color: var(--color-gold-primary);
+        color: var(--color-bg-main);
+        box-shadow: var(--shadow-gold-glow);
+        transform: translateY(-3px);
+
+        [data-icon] {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/* Kolom 2: Navigasi Links */
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  a {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.25s ease;
+
+    [data-icon] {
+      color: var(--color-gold-primary);
+      font-size: 0.85rem;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: var(--color-gold-light);
+      transform: translateX(4px);
+
+      [data-icon] {
+        transform: translateX(2px);
+      }
+    }
+  }
+}
+
+/* Kolom 3: Detail Kontak */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .info-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    [data-icon] {
+      color: var(--color-gold-primary);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    strong {
+      display: block;
+      font-size: 0.825rem;
+      color: var(--color-text-primary);
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: 0.825rem;
+      line-height: 1.4;
+      color: var(--color-text-secondary);
+    }
+  }
+}
+
+/* Kolom 4: Google Maps Frame */
+.footer-map-col {
+  display: flex;
+  flex-direction: column;
+
+  .map-wrapper {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    box-shadow: var(--shadow-card);
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      /* Style Dark Mode Google Maps */
+      filter: grayscale(100%) invert(90%) contrast(85%);
+      transition: filter 0.4s ease;
+    }
+
+    &:hover iframe {
+      filter: grayscale(0%) invert(0%) contrast(100%);
+    }
+  }
+
+  .map-direct-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-gold-primary);
+    transition: color 0.3s ease;
+
+    [data-icon] {
+      font-size: 0.85rem;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: var(--color-gold-light);
+
+      [data-icon] {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  font-size: 0.825rem;
+
+  @media (min-width: calc(#{$bp-tablet} + 1px)) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .copyright-text {
+    color: var(--color-text-secondary);
+
+    strong {
+      color: var(--color-text-primary);
+    }
+  }
+
+  .bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      color: var(--color-text-secondary);
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--color-gold-light);
+      }
+    }
+
+    .dot {
+      color: var(--color-border);
+    }
+  }
+}

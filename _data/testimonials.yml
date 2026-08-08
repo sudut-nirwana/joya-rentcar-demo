@@ -1,0 +1,20 @@
+- name: "Bpk. Hendra Wijaya"
+  role: "Direktur PT Sinar Utama"
+  rating: 5
+  avatar: "https://ui-avatars.com/api/?name=Hendra+Wijaya&background=272727&color=c09f50"
+  tag: "Sewa Alphard VVIP"
+  text: "Pelayanan sangat profesional. Driver datang 15 menit sebelum jadwal, mobil Alphard bersih harum, dan perjalanan dinas tamu direksi kami berjalan sangat lancar."
+
+- name: "Ibu Amanda Putri"
+  role: "Event Organizer Lead"
+  rating: 5
+  avatar: "https://ui-avatars.com/api/?name=Amanda+Putri&background=272727&color=c09f50"
+  tag: "Wedding Car & HiAce"
+  text: "Armada HiAce dan Zenix untuk rombongan keluarga pengantin sangat terawat. Komunikasi dengan Mas Gunawan di bagian booking juga cepat dan responsif 24 jam."
+
+- name: "Dr. Rizky Pratama"
+  role: "Pengusaha"
+  rating: 5
+  avatar: "https://ui-avatars.com/api/?name=Rizky+Pratama&background=272727&color=c09f50"
+  tag: "Lepas Kunci Fortuner"
+  text: "Proses verifikasi lepas kunci cepat dan tidak rumit. Kondisi mesin Fortuner sangat prima untuk perjalanan luar kota. Fix bakal langganan terus di Joya!"

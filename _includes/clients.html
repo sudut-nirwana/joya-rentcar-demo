@@ -1,0 +1,26 @@
+<section class="clients-section">
+  <div class="container">
+    <div class="clients-header">
+      <span class="clients-subtitle">Dipercaya oleh Instansi & Perusahaan Ternama</span>
+    </div>
+  </div>
+
+  <div class="ticker-wrapper">
+
+    <div class="ticker-track">
+      {% for i in (1..2) %}
+        {% for client in site.data.clients %}
+        <div class="client-card">
+          <img 
+            src="{{ client.logo }}" 
+            alt="{{ client.name }}" 
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            loading="lazy"
+          >
+          <span class="client-name-fallback" style="display: none;">{{ client.name }}</span>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

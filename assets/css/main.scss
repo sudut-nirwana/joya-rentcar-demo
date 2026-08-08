@@ -1,0 +1,19 @@
+---
+---
+
+/* Base Rules */
+@use "base/variables" as *;
+@use "base/reset";
+@use "base/animations";
+
+/* Components Rules */
+@use "components/splash";
+@use "components/header";
+@use "components/hero";
+@use "components/filter-catalog";
+@use "components/layanan";
+@use "components/about-team";
+@use "components/clients";
+@use "components/testimonials";
+@use "components/faq";
+@use "components/footer";

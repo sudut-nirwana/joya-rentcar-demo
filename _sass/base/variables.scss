@@ -1,0 +1,50 @@
+:root {
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Gold Accent Palette */
+  --color-gold-dark: #936521;
+  --color-gold-primary: #c09f50;
+  --color-gold-light: #f6e58d;
+
+  /* Dark Background Palette */
+  --color-bg-main: #1e1e1e;
+  --color-bg-card: #242424;
+  --color-bg-elevated: #272727;
+
+  /* Text Colors */
+  --color-text-primary: #ede6d6;
+  --color-text-secondary: #96938e;
+
+  /* Borders & Lines */
+  --color-border: #4f4d49;
+
+  /* Extended Utility Colors */
+  --color-card-hover: #2a2a2a;
+  --color-overlay: rgba(0, 0, 0, 0.75);
+  --color-whatsapp: #25d366;
+  
+  /* Shadows & Glows */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-gold-glow: 0 0 15px rgba(192, 159, 80, 0.2);
+}
+
+/* Breakpoint Utilities */
+$bp-tablet: 768px;
+$bp-desktop-sm: 901px;
+$bp-desktop: 1200px;
+
+/* Utility Icon Container */
+[data-icon] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  svg {
+    display: block;
+    width: 1.3em;
+    height: 1.3em;
+  }
+}

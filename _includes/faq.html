@@ -1,0 +1,118 @@
+<section class="faq-section" id="faq">
+  <div class="faq-container">
+    
+    <div class="faq-sidebar animate-slideup">
+      <div class="faq-header">
+        <span class="faq-badge">
+          <i data-icon="sparkles"></i> TANYA JAWAB
+        </span>
+        <h2 class="faq-title">Pertanyaan yang <span class="text-gold">Sering Diajukan</span></h2>
+        <p class="faq-desc">Temukan jawaban cepat seputar persyaratan sewa, armada, dan layanan Joya Rent Car di sini.</p>
+      </div>
+
+      <div class="faq-help-card animate-slideup">
+        <div class="help-icon-wrapper">
+          <i data-icon="message-square-dots"></i>
+        </div>
+        <div class="help-text">
+          <h4>Masih Ada Pertanyaan?</h4>
+          <p>Tim Customer Service kami siap membantu Anda 24/7.</p>
+          <div class="faq-gold-decoration">
+            <svg class="gold-thread" viewBox="0 0 300 45" preserveAspectRatio="none">
+              <path d="M0 35 Q 150 -5 300 30" stroke="url(#goldGrad1)" stroke-width="1.5" fill="none" />
+              <path d="M0 15 Q 150 45 300 20" stroke="url(#goldGrad2)" stroke-width="1.2" stroke-dasharray="4 2" fill="none" />
+            </svg>
+            <span class="gold-dot dot-1"></span>
+            <span class="gold-dot dot-2"></span>
+            <span class="gold-dot dot-3"></span>
+            <span class="gold-dot dot-4"></span>
+          </div>
+        </div>
+        
+        {% assign wa = site.data.contact_wa %}
+
+        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="help-btn" target="_blank" rel="noopener noreferrer">
+          <span data-icon="whatsapp"></span>
+          <span>Hubungi Admin</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="faq-content">
+      
+      <details class="faq-item animate-slideup" open>
+        <summary class="faq-question">
+          <span class="question-text">Apa saja syarat dan dokumen untuk sewa mobil lepas kunci?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Persyaratan sewa lepas kunci meliputi e-KTP, SIM A aktif, bukti kepemilikan tempat tinggal atau ID karyawan, serta akun media sosial aktif untuk proses verifikasi cepat tim kami.</p>
+        </div>
+      </details>
+
+      <details class="faq-item animate-slideup">
+        <summary class="faq-question">
+          <span class="question-text">Apakah tarif sewa sudah termasuk BBM, Tol, dan Driver?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Kami menyediakan opsi Sewa Lepas Kunci dan Dengan Driver. Untuk paket dengan Driver, Anda bisa memilih paket All-In (termasuk BBM, Tol, Parkir, & Uang Makan Driver) atau hanya jasa Driver saja.</p>
+        </div>
+      </details>
+
+      <details class="faq-item animate-slideup">
+        <summary class="faq-question">
+          <span class="question-text">Bagaimana prosedur pemesanan dan ketentuan DP reservasi?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Reservasi dianggap sah setelah melakukan DP minimal 30%. Pelunasan dapat dilakukan saat serah terima armada di lokasi Anda atau sebelum perjalanan dimulai.</p>
+        </div>
+      </details>
+
+      <details class="faq-item animate-slideup">
+        <summary class="faq-question">
+          <span class="question-text">Bagaimana jika armada mengalami kendala mekanis atau darurat?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Seluruh armada Joya Rent Car selalu melalui inspeksi rutin & tercover asuransi. Jika terjadi kendala di jalan, tim Support 24/7 kami siap memberikan bantuan teknis atau penggantian unit sekelas.</p>
+        </div>
+      </details>
+
+      <details class="faq-item animate-slideup">
+        <summary class="faq-question">
+          <span class="question-text">Berapa lama durasi sewa per hari dan bagaimana biaya overtime-nya?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Durasi sewa harian dihitung 12 jam atau per-tanggal (fullday hingga pukul 23.59). Overtime dikenakan biaya tambahan sebesar 10% per jam dari harga sewa harian.</p>
+        </div>
+      </details>
+
+      <details class="faq-item animate-slideup">
+        <summary class="faq-question">
+          <span class="question-text">Apakah armada Joya Rent Car bisa digunakan untuk perjalanan luar kota?</span>
+          <span class="faq-icon-box">
+            <i data-icon="chevron-down"></i>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Bisa banget! Seluruh unit kami siap untuk perjalanan dalam maupun luar kota. Harap menginformasikan kota tujuan Anda saat konfirmasi booking ke admin kami.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>

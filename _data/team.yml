@@ -1,0 +1,70 @@
+# _data/team.yml
+management:
+  - name: "Bapak Aang Gunawan"
+    role: "Founder & Owner"
+    photo: "/assets/images/team/owner.webp"
+    badge: "Owner"
+    desc: "Memastikan standar pelayanan VVIP dan armada terbaik untuk setiap konsumen."
+
+  - name: "Ibu Anggun"
+    role: "Operational & Fleet Manager"
+    photo: "/assets/images/team/manager.webp"
+    badge: "Operational"
+    desc: "Mengelola penjadwalan armada, rotasi driver, serta kelayakan unit harian."
+
+  - name: "Mas Wan Gugun"
+    role: "Customer Relations & Booking"
+    photo: "/assets/images/team/cs-lead.webp"
+    badge: "Reservation"
+    desc: "Siap melayani reservasi 24/7 dan fleksibilitas kebutuhan rute konsumen."
+
+drivers:
+  - name: "Rahmat Hidayat"
+    role: "VIP Chauffeur"
+    experience: "8+ Tahun"
+    photo: "/assets/images/team/driver1.webp"
+    specialty: "Alphard & Zenix"
+    rating: "4.9/5.0"
+    badges:
+      - "Bebas Rokok"
+      - "Paham Rute Luar Kota"
+
+  - name: "Budi Santoso"
+    role: "Senior Driver"
+    experience: "10+ Tahun"
+    photo: "/assets/images/team/driver2.webp"
+    specialty: "HiAce & Pariwisata"
+    rating: "5.0/5.0"
+    badges:
+      - "Defensive Driving"
+      - "Ramah & Tepat Waktu"
+
+  - name: "Andi Wijaya"
+    role: "Executive Driver"
+    experience: "6+ Tahun"
+    photo: "/assets/images/team/driver3.webp"
+    specialty: "Sedan & SUV VIP"
+    rating: "4.9/5.0"
+    badges:
+      - "Protokol VVIP"
+      - "Rapi Ramah & Sopan"
+
+  - name: "Hendra Pratama"
+    role: "All-Route Driver"
+    experience: "7+ Tahun"
+    photo: "/assets/images/team/driver4.webp"
+    specialty: "Fortuner & Reborn"
+    rating: "4.8/5.0"
+    badges:
+      - "Medan Antarkota"
+      - "Paham Mesin"
+
+  - name: "Agus Setiawan"
+    role: "Airport Specialist"
+    experience: "5+ Tahun"
+    photo: "/assets/images/team/driver5.webp"
+    specialty: "City & Transfer Bandara"
+    rating: "4.9/5.0"
+    badges:
+      - "Standby 24 Jam"
+      - "Navigasi Cepat"

@@ -1,0 +1,86 @@
+<!-- ===== FILTER-KATALOG SECTION ===== -->
+<section class="armada-section" id="armada">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="armada-header">
+      <div class="armada-badge animate-slideup">
+        <span data-icon="sparkles"></span>
+        <span>Pilihan Armada Lengkap</span>
+      </div>
+      
+      <h2 class="armada-title animate-slideup">
+        Temukan Mobil <span class="text-gold">Pilihan Anda</span>
+      </h2>
+      
+      <p class="armada-desc animate-slideup">
+        Joya Rent Car berusaha memberikan pelayanan terbaik dengan menyediakan armada yang prima, bersih dan siap jalan.
+      </p>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="armada-filters-wrapper animate-slideup">
+      <div class="armada-filters">
+        <button type="button" class="filter-btn active" data-filter="all">Semua</button>
+        <button type="button" class="filter-btn" data-filter="city-car">City Car</button>
+        <button type="button" class="filter-btn" data-filter="mpv">MPV</button>
+        <button type="button" class="filter-btn" data-filter="suv">SUV</button>
+        <button type="button" class="filter-btn" data-filter="luxury">Luxury</button>
+        <button type="button" class="filter-btn" data-filter="sedan">Sedan</button>
+        <button type="button" class="filter-btn" data-filter="van-bus">VAN/BUS</button>
+      </div>
+    </div>
+
+    <!-- Armada Cards Grid -->
+    <div class="armada-grid" id="armadaGrid">
+      {% for item in site.data.armada %}
+      <div class="armada-card animate-slideup delay-400" data-category="{{ item.kategori }}">
+        <div class="card-media">
+          <img src="{{ item.gambar }}" alt="{{ item.nama }}" width="400" height="260" loading="lazy">
+          <span class="card-category-tag">{{ item.kategori_label }}</span>
+        </div>
+        
+        <div class="card-body">
+          <h3 class="card-title">{{ item.nama }}</h3>
+          
+          <div class="card-specs">
+            <div class="spec-item" title="Kapasitas Kursi">
+              <span data-icon="users"></span>
+              <span>{{ item.kapasitas }}</span>
+            </div>
+            <div class="spec-item" title="Transmisi">
+              <span data-icon="transmisi"></span>
+              <span>{{ item.transmisi }}</span>
+            </div>
+            <div class="spec-item" title="Bahan Bakar">
+              <span data-icon="fuel"></span>
+              <span>{{ item.bahan_bakar }}</span>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-amount">{{ item.harga }}</span>
+              <span class="price-duration"><span data-icon="clock-24"></span>{{ item.durasi }}</span>
+            </div>
+            
+            <a href="https://wa.me/{{ item.phone_katalog }}?text={{ item.pesan_wa | url_encode }}" class="btn-card-cta" target="_blank" rel="noopener">
+              <span data-icon="whatsapp"></span>
+              <span>Pilih Armada</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Limit Toggle Button -->
+    <div class="armada-toggle-wrapper">
+      <button type="button" class="btn-toggle-armada" id="armadaToggleBtn" aria-expanded="false">
+        <span class="btn-text">Lihat Semua Armada</span>
+        <span data-icon="chevron-down" class="toggle-icon"></span>
+      </button>
+    </div>
+
+  </div>
+</section>

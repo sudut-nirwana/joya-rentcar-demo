@@ -1,0 +1,94 @@
+@use 'base/variables' as *;
+
+/* Layout Seksi Klien */
+.clients-section {
+  padding: 36px 0;
+  background-color: var(--color-bg-main);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: 10px;
+
+  .clients-subtitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-gold-primary);
+  }
+}
+
+/* Wrapper Ticker dengan Masking Fade Kiri Kanan */
+.ticker-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+
+  /* Gradasi halus di ujung kiri dan kanan */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+
+  &:hover {
+    animation-play-state: paused; /* Berhenti sejenak saat kursor di-hover */
+  }
+}
+
+/* Kartu Kecil Logo Klien */
+.client-card {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  height: 52px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    border-color: var(--color-gold-primary);
+    transform: translateY(-2px);
+  }
+
+  img {
+    max-height: 28px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.3s ease;
+  }
+
+  &:hover img {
+    filter: grayscale(0%) opacity(1);
+  }
+
+  .client-name-fallback {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+  }
+}
+
+/* Keyframes Animasi Mengalir */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

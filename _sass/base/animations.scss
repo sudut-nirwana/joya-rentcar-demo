@@ -1,0 +1,66 @@
+@use 'base/variables' as *;
+
+
+/* Animations & Transitions */
+
+/* Base Observer Animation Setup */
+[class*="animate-"] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animation Variants */
+.animate-slideup {
+  transform: translateY(35px);
+}
+
+.animate-slidedown {
+  transform: translateY(-35px);
+}
+
+.animate-fadein {
+  transform: scale(1);
+}
+
+.animate-zoomin {
+  transform: scale(0.92);
+}
+
+/* Triggered State via JS Observer */
+[class*="animate-"].is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Staggered Delay Utilities */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Luxury Glow Keyframes */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-gold-glow);
+  }
+  50% {
+    box-shadow: 0 0 25px rgb(from var(--color-gold-primary) r g b / 0.4);
+  }
+}
+
+.glow-gold-pulse {
+  animation: goldPulse 3s infinite ease-in-out;
+}
+
+/* Accessibility: Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-"] {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

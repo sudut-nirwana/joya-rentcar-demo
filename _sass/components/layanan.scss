@@ -1,0 +1,245 @@
+@use 'base/variables' as *;
+
+/* ===== SERVICES SECTION STYLING ===== */
+.services-section {
+  position: relative;
+  padding: 30px 0 60px;
+  background-color: var(--color-bg-main);
+}
+
+/* Header Styling & Spacing Fix */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 40px;
+
+  @media (min-width: $bp-tablet) {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+}
+
+/* Badge Section */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(192, 159, 80, 0.35);
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  // box-shadow: var(--shadow-gold-glow);
+
+  [data-icon] {
+    color: var(--color-gold-primary);
+  }
+}
+
+/* Title & Gold Gradient Accent */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 2.35rem;
+  }
+
+  .text-gold {
+    color: var(--color-gold-primary);
+    background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Description / Sub-headline */
+.section-desc {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  max-width: 620px;
+  margin: 0;
+}
+
+/* Grid Layout (3 Kolom di Desktop, 2 di Tablet, 1 di Mobile) */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (min-width: $bp-desktop-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Service Card Container */
+.service-card {
+  position: relative;
+  min-height: 225px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-bg-card);
+  border: 1px solid rgba(192, 159, 80, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 22px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold-primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), var(--shadow-gold-glow);
+
+    .service-bg-img {
+      transform: scale(1.08);
+    }
+
+    .gold-thread {
+      opacity: 1;
+    }
+  }
+}
+
+/* Background Image & Overlay */
+.service-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.service-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 30, 30, 0.25) 0%,
+    rgba(24, 24, 24, 0.78) 55%,
+    rgba(18, 18, 18, 0.98) 100%
+  );
+}
+
+/* Content Text inside Card */
+.service-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  font-style: italic;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.service-desc {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: rgba(237, 230, 214, 0.82);
+  margin: 0;
+}
+
+/* Hiasan 2 Benang Emas & Kunang-kunang Glow */
+.service-gold-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gold-thread {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  opacity: 0.85;
+  transition: opacity 0.35s ease;
+}
+
+/* Bintik Kunang-kunang Emas */
+.gold-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-gold-light);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--color-gold-light), 0 0 10px var(--color-gold-primary);
+  animation: pulseFirefly 3s infinite ease-in-out;
+
+  &.dot-1 {
+    left: 18%;
+    bottom: 22px;
+    animation-delay: 0s;
+  }
+
+  &.dot-2 {
+    left: 45%;
+    bottom: 12px;
+    width: 5px;
+    height: 5px;
+    animation-delay: 0.8s;
+  }
+
+  &.dot-3 {
+    left: 72%;
+    bottom: 26px;
+    animation-delay: 1.6s;
+  }
+
+  &.dot-4 {
+    left: 88%;
+    bottom: 14px;
+    width: 3px;
+    height: 3px;
+    animation-delay: 2.2s;
+  }
+}
+
+@keyframes pulseFirefly {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}

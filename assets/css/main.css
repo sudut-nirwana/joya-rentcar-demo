@@ -2,18 +2,18 @@
 ---
 
 /* Base Rules */
-@use "base/variables" as *;
-@use "base/reset";
-@use "base/animations";
+@import "base/variables";
+@import "base/reset";
+@import "base/animations";
 
 /* Components Rules */
-@use "components/splash";
-@use "components/header";
-@use "components/hero";
-@use "components/filter-catalog";
-@use "components/layanan";
-@use "components/about-team";
-@use "components/clients";
-@use "components/testimonials";
-@use "components/faq";
-@use "components/footer";
+@import "components/splash";
+@import "components/header";
+@import "components/hero";
+@import "components/filter-catalog";
+@import "components/layanan";
+@import "components/about-team";
+@import "components/clients";
+@import "components/testimonials";
+@import "components/faq";
+@import "components/footer";

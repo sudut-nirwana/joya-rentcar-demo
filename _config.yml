@@ -2,8 +2,8 @@
 title: "Joya Rent Car - Sewa Mobil Mudah & Terpercaya"
 tagline: "Berkendara Lebih Nyaman & Elegan"
 description: "Penyedia jasa rental mobil profesional & terpercaya. Melayani sewa mobil lepas kunci maupun plus driver untuk kebutuhan dinas, instansi, dan perorangan."
-url: "https://joyarentcar.com"
-baseurl: ""
+url: "https://sudut-nirwana.github.io"
+baseurl: "/joya-rentcar-demo"
 
 # Build & Markdown Settings
 markdown: kramdown
@@ -17,18 +17,18 @@ sass:
 
 # Active Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
+    - jekyll-feed
+    - jekyll-seo-tag
+    - jekyll-sitemap
 
 # Excluded Files
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - node_modules/
-  - vendor/
-  - .sass-cache/
-  - .jekyll-cache/
-  - .git/
-  - .gitignore
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - node_modules/
+    - vendor/
+    - .sass-cache/
+    - .jekyll-cache/
+    - .git/
+    - .gitignore

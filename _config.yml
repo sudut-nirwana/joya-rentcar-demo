@@ -5,6 +5,10 @@ description: "Penyedia jasa rental mobil profesional & terpercaya. Melayani sewa
 url: "https://sudut-nirwana.github.io"
 baseurl: "/joya-rentcar-demo" 
 
+# Default Open Graph & Social Media Image
+image: /assets/images/og-image.jpg
+logo: /assets/images/favicon.png
+
 # Build & Markdown Settings
 markdown: kramdown
 highlighter: rouge

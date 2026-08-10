@@ -65,7 +65,7 @@
               <span class="price-duration"><span data-icon="clock-24"></span>{{ item.durasi }}</span>
             </div>
             
-            <a href="https://wa.me/{{ item.phone_katalog }}?text={{ item.pesan_wa | url_encode }}" class="btn-card-cta" target="_blank" rel="noopener">
+            <a href="https://wa.me/{{ item.phone_katalog }}?text={{ item.pesan_wa | uri_escape }}" class="btn-card-cta" target="_blank" rel="noopener">
               <span data-icon="whatsapp"></span>
               <span>Pilih Armada</span>
             </a>

@@ -19,7 +19,7 @@
           <span>Armada Tercover Asuransi & Terawat</span>
         </div>
         <div class="footer-socials">
-          <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+          <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
             <span data-icon="whatsapp"></span>
           </a>
           <a href="https://instagram.com" aria-label="Instagram" class="social-link" target="_blank" rel="noopener">

@@ -24,7 +24,7 @@
       <div class="hero-actions animate-slideup delay-400">
         {% assign wa = site.data.contact_wa %}
 
-        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="btn-cta-gold glow-gold-pulse" target="_blank" rel="noopener">
+        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" class="btn-cta-gold glow-gold-pulse" target="_blank" rel="noopener">
           <span data-icon="whatsapp"></span>
           <span>Kontak Admin</span>
         </a>

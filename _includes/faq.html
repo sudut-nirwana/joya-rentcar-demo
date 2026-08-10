@@ -44,7 +44,7 @@
         
         {% assign wa = site.data.contact_wa %}
 
-        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="help-btn" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" class="help-btn" target="_blank" rel="noopener noreferrer">
           <span data-icon="whatsapp"></span>
           <span>Hubungi Admin</span>
         </a>

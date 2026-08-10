@@ -10,7 +10,7 @@
 
     <div class="mobile-actions-wrapper">
       <!-- DIBERSIHKAN: Nomor WA diambil dari file data -->
-      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="mobile-btn-cta" target="_blank" rel="noopener">
+      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" class="mobile-btn-cta" target="_blank" rel="noopener">
         <span data-icon="whatsapp"></span>
         <span>Reservasi</span>
       </a>
@@ -29,7 +29,7 @@
         <li><a href="#faq" class="nav-link">Tanya/Jawab</a></li>
         <li><a href="#kontak-footer" class="nav-link">Kontak</a></li>
       </ul>
-      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="btn-cta-gold" target="_blank" rel="noopener">
+      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" class="btn-cta-gold" target="_blank" rel="noopener">
         <span data-icon="reservasi"></span>
         <span>Reservasi Sekarang</span>
       </a>
@@ -88,7 +88,7 @@
     </ul>
 
     <div class="sidebar-cta">
-      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | url_encode }}" class="btn-cta-gold full-width" target="_blank" rel="noopener">
+      <a href="https://wa.me/{{ wa.phone }}?text={{ wa.message_hero | uri_escape }}" class="btn-cta-gold full-width" target="_blank" rel="noopener">
         <span data-icon="reservasi"></span>
         <span>Reservasi Sekarang</span>
       </a>
